@@ -19,9 +19,8 @@ const Rating = ({product:{rating,numReviews},color}) => {
              <span>
                <i style={{color}} className={rating >=5 ? "fas fa-star" : rating>=4.5 ? "fas fa-star-half-alt": "far fa-star"} ></i>
              </span>
-    
              <span>
-                 {numReviews} reviews
+                 {numReviews }{""}  reviews
              </span>
          </div>
         </>;
