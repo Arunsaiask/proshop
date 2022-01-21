@@ -4,7 +4,10 @@
   "description": "Mern ecommerce site",
   "main": "server.js",
   "scripts": {
-    "start": "node backend/server.js"
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client":"npm start --prefix frontend",
+    "dev":"concurrently \"npm run server \" \"npm run client \""
   },
   "repository": {
     "type": "git",
@@ -17,6 +20,7 @@
   },
   "homepage": "https://github.com/Arunsaiask/proshop#readme",
   "dependencies": {
+    "axios": "^0.25.0",
     "express": "^4.17.2",
     "nodemon": "^2.0.15"
   }
