@@ -31,9 +31,7 @@ Rating.defaultProps ={
 }
 
 Rating.propTypes ={
-  product:PropTypes.object.isRequired,
-  rating:PropTypes.number.isRequired,
-  numReviews:PropTypes.number.isRequired
+  product:PropTypes.object.isRequired
 }
 
 
