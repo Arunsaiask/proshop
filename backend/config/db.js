@@ -6,9 +6,9 @@ const connectDB = async ()=>{
             useUnifiedTopology:true,
             useNewUrlParser:true
         })
-        console.log("mongodb connected")
-    } catch (err) {
-        console.log(err.message)
+        console.log(`mongodb connected`.cyan.underline)
+    } catch (error) {
+        console.log(`Error:${error.message}`.red.underline.bold)
         process.exit(1)
     }
    

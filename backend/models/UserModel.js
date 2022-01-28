@@ -1,7 +1,7 @@
-import mogooose, { mongo } from "mongoose"
-import { boolean } from "webidl-conversions"
+import mongoose from "mongoose"
 
-const UseSchema = mogooose.Schema({
+
+const UserSchema = mongoose.Schema({
     name:{
         type:String,
         required:true
@@ -16,7 +16,7 @@ const UseSchema = mogooose.Schema({
         required:true
     },
     isAdmin:{
-        type:boolean,
+        type:Boolean,
         required:true,
         default:false,
     }
@@ -24,6 +24,6 @@ const UseSchema = mogooose.Schema({
    timestamps:true
 })
 
-const User = mongoose.model("User",UseSchema)
+const User = mongoose.model("User",UserSchema)
 
 export default User

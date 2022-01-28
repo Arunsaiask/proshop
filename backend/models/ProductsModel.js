@@ -1,8 +1,6 @@
-import mogooose, { mongo } from "mongoose"
-import { boolean } from "webidl-conversions"
+import mongoose from "mongoose"
 
-
-const reviewsSchema = mongoose.Schema({
+const reviewSchema = mongoose.Schema({
     name:{
         type:String,
         required:true
@@ -20,9 +18,9 @@ const reviewsSchema = mongoose.Schema({
 })
 
 
-const ProductsSchema = mogooose.Schema({
+const ProductsSchema = mongoose.Schema({
     user:{
-        type:mongoose.Schema.Types.objectId,
+        type: mongoose.Schema.Types.ObjectId,
         require:true,
         ref:"User"
     },
@@ -50,20 +48,21 @@ const ProductsSchema = mogooose.Schema({
         type:Number,
         required:true,
     },
-    reviews:[reviewsSchema],
+    reviews:[reviewSchema],
     rating:{
         type:Number,
-        required:true
+        required:true,
+        default:0
     },
     countInStock:{
         type:Number,
         required:true,
-      
+        default:0
     },
     numReviews:{
         type:Number,
         required:true,
-      
+        default:0
     }
 },{
    timestamps:true
